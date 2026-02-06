@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    border-bottom: 1px solid #000;
+    padding: 40px 0 30px;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    max-width: 800px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+nav a {
+    font-weight: 500;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.project-card {
+    border: 1.5px solid #000;
+    border-radius: 0;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    border-radius: 15px;
+    border: 1.5px solid #000;
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 15px;
+    border: 1px solid #eee;
+}
+
+.project-card h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.project-card a {
+    color: #666;
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+/* Footer styling */
+footer {
+    border-top: 1px solid #000;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Admin link styling - subtle and discreet */
+.admin-link {
+    color: #999;
+    font-size: 0.85rem;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    opacity: 0.7;
+}
+
+.admin-link:hover {
+    color: #000;
+    background: #f5f5f5;
+    opacity: 1;
+    text-decoration: none;
+}
+
+/* Mobile responsive footer */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .admin-link {
+        align-self: center;
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+    
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
